@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [Framework Testing]">
+  <listeners>
+    <listener class-name="DemoPackage.listeners"/>
+    <listener class-name="resources.ExtentReporterNG"/>
+  </listeners>
+  <test thread-count="5" verbose="0" name="test1(failed)">
+    <classes>
+      <class name="DemoPackage.TC_01Test">
+        <methods>
+          <include name="InitialiseDriver"/>
+          <include name="ClickTest"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- DemoPackage.TC_01Test -->
+    </classes>
+  </test> <!-- test1(failed) -->
+  <test thread-count="5" verbose="0" name="Test2(failed)">
+    <classes>
+      <class name="DemoPackage.TC_02Test">
+        <methods>
+          <include name="Validations"/>
+          <include name="InitialiseDriver"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- DemoPackage.TC_02Test -->
+    </classes>
+  </test> <!-- Test2(failed) -->
+</suite> <!-- Failed suite [Framework Testing] -->
